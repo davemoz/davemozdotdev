@@ -19,3 +19,4 @@ collections:
           fields:
             - { label: "Title", name: "title", widget: "string"}
             - { label: "Description", name: "description", widget: "text"}
+        - { label: "Footer", name: 'footer', widget: 'string' }

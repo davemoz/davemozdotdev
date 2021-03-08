@@ -1,26 +1,26 @@
-export default function Footer() {
+const date = new Date()
+const year = date.getFullYear()
+
+const Footer = () => {
   return (
     <>
       <footer>
-        Made with{' '}
-        <img src="/netliheart.svg" alt="Netlify Logo" className="logo" /> for
-        you
+        copyright © { year } Dave Mozdzanowski
       </footer>
       <style jsx>{`
         footer {
           width: 100%;
-          height: 100px;
+					padding: 20px 0;
           border-top: 1px solid #eaeaea;
           display: flex;
           justify-content: center;
           align-items: center;
-        }
-
-        .logo {
-          height: 1em;
-          margin: 5px;
+					font-family: Helvetica, Arial, sans-serif;
+					color: #5d5d5d;
         }
       `}</style>
     </>
   )
 }
+
+export default Footer;
