@@ -1,26 +1,16 @@
-const date = new Date()
-const year = date.getFullYear()
+import styles from "../styles/Footer.module.scss";
 
 const Footer = () => {
+  const date = new Date();
+  const year = date.getFullYear();
+
   return (
     <>
-      <footer>
-        copyright © { year } Dave Mozdzanowski
+      <footer className={styles.footer_wrap}>
+        copyright © {year} Dave Mozdzanowski
       </footer>
-      <style jsx>{`
-        footer {
-          width: 100%;
-					padding: 20px 0;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-					font-family: Helvetica, Arial, sans-serif;
-					color: #5d5d5d;
-        }
-      `}</style>
     </>
-  )
-}
+  );
+};
 
 export default Footer;

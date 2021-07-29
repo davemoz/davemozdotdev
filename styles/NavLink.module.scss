@@ -1,0 +1,18 @@
+.nav-link {
+  color: #000;
+  font-family: "Ubunto", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  text-decoration-color: rgba(0, 255, 137, 0.15);
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 0;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-thickness: 8px;
+    text-decoration-color: rgba(0, 255, 137, 0.15);
+    text-underline-offset: -10px;
+    transition: all 0.5s ease-in-out;
+  }
+}

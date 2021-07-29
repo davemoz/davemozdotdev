@@ -1,0 +1,22 @@
+.socials-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.social-item {
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.social-link {
+  color: #5d5d5d;
+  font-size: 24px;
+}
+.social-link svg {
+  width: 24px;
+  height: 24px;
+}

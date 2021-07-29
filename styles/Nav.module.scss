@@ -1,0 +1,23 @@
+.nav {
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding-left: 30px;
+}
+
+.nav-item {
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.nav-link {
+  color: #000;
+  text-decoration: none;
+}

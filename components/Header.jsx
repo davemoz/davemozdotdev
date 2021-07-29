@@ -1,40 +1,24 @@
-import React from 'react';
-import { attributes } from '../content/home.md'
-import SocialNav from './SocialNav';
+import React from "react";
+import Nav from "./Nav/Nav";
+import SocialNav from "./SocialNav";
+import { attributes } from "../content/home.md";
+
+import styles from "../styles/Header.module.scss";
 
 const Header = () => {
-	const { title, subtitle } = attributes;
+  const { title, subtitle } = attributes;
   return (
-		<>
-			<header className="header">
-				<div className="titles">
-					<h1 className="title">{title}</h1>
-					<h2 className="subtitle">{subtitle}</h2>
-				</div>
-				<SocialNav/>
-			</header>
-			<style jsx>{`
-			.header {
-				padding: 20px;
-				display: flex;
-				justify-content: space-between;
-				font-family: Helvetica, Arial, sans-serif;
-			}
-			.titles {
-				display: flex;
-				flex-direction: column;
-			}
-			.title {
-				margin: 0 0 5px;
-			}
-			.subtitle {
-				margin: 0;
-				color: #505050;
-				font-weight: 200;
-			}
-			`}</style>
-		</>
-	)
-}
+    <>
+      <header className={styles.header}>
+        <div className={styles.titles}>
+          <h1 className={styles.title}>{title}</h1>
+          <h2 className={styles.subtitle}>{subtitle}</h2>
+        </div>
+        <Nav />
+        <SocialNav />
+      </header>
+    </>
+  );
+};
 
 export default Header;
