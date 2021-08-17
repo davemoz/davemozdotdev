@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import aboutImage from '../public/kayla_dave.jpeg';
+
 import styles from '../styles/About.module.scss';
 
 const About = () => {
@@ -20,7 +22,7 @@ const About = () => {
         <div className={styles.image_container}>
           <Image
             className={styles.image}
-            src='/kayla_dave.jpeg'
+            src={aboutImage}
             alt='Kayla giving Dave a smooch :)'
             width='384'
             height='315'

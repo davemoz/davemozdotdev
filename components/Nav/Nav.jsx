@@ -2,7 +2,7 @@ import NavLink from './NavLink';
 
 import styles from '../../styles/Nav.module.scss';
 
-const navItems = ['about', 'work', 'contact'];
+const navItems = ['about']; //, 'work', 'contact'];
 
 const Nav = () => {
   return (
