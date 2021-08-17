@@ -1,0 +1,26 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.body_wrap {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1 0 27%;
+  max-width: 400px;
+  padding-right: 3%;
+}
+
+.paragraph {
+  line-height: 1.5;
+}
+
+.image_container {
+  transform: rotate(5deg);
+}

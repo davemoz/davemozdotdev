@@ -1,7 +1,13 @@
-import styles from "../../styles/NavLink.module.scss";
+import Link from 'next/link';
 
-const NavLink = ({ addlClassName, children }) => {
-  return <a className={`${styles["nav-link"]} ${addlClassName}`}>{children}</a>;
+import styles from '../../styles/NavLink.module.scss';
+
+const NavLink = ({ href, children }) => {
+  return (
+    <Link href={href} passHref>
+      <a className={styles['nav-link']}>{children}</a>
+    </Link>
+  );
 };
 
 export default NavLink;

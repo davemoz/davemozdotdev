@@ -3,18 +3,50 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Ubuntu", sans-serif;
 }
-.titles {
+.branding {
   display: flex;
   flex-direction: column;
+}
+.branding_link {
+  color: #000;
+  text-decoration: none;
+  text-decoration-color: rgba(0, 255, 137, 0.15);
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 0;
+  &:hover {
+    .title {
+      // animation: flutter 0.7s cubic-bezier(0, 0, 0.07, 1);
+      text-decoration: underline;
+      text-decoration-thickness: 8px;
+      text-decoration-color: rgba(0, 255, 137, 0.15);
+      text-underline-offset: -10px;
+      transition: all 0.5s ease-in-out;
+    }
+  }
 }
 .title {
   font-weight: 400;
   margin: 0;
+  text-decoration: none;
+  text-decoration-color: rgba(0, 255, 137, 0.15);
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 0;
 }
 .subtitle {
   margin: 0;
   color: #505050;
   font-weight: 300;
+}
+
+@keyframes flutter {
+  0% {
+    letter-spacing: normal;
+  }
+  50% {
+    letter-spacing: 10px;
+  }
+  100% {
+    letter-spacing: normal;
+  }
 }
