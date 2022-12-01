@@ -1,15 +1,13 @@
-import styles from "../styles/Footer.module.scss";
+import styles from "./Footer.module.scss";
 
 const Footer = () => {
   const date = new Date();
   const year = date.getFullYear();
 
   return (
-    <>
-      <footer className={styles.footer_wrap}>
-        copyright © {year} Dave Mozdzanowski
-      </footer>
-    </>
+    <footer className={styles.footer_wrap}>
+      copyright © {year} Dave Mozdzanowski
+    </footer>
   );
 };
 

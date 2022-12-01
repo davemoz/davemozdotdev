@@ -1,6 +1,6 @@
 import NavLink from './NavLink';
 
-import styles from '../../styles/Nav.module.scss';
+import styles from './Nav.module.scss';
 
 const navItems = ['about']; //, 'work', 'contact'];
 

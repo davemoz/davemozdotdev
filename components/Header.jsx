@@ -1,28 +1,21 @@
-import React from 'react';
 import Link from 'next/link';
 import Nav from './Nav/Nav';
 import SocialNav from './SocialNav';
-import { attributes } from '../content/home.md';
 
-import styles from '../styles/Header.module.scss';
+import styles from './Header.module.scss';
 
 const Header = () => {
-  const { title, subtitle } = attributes;
   return (
-    <>
-      <header className={styles.header}>
-        <div className={styles.branding}>
-          <Link href={'/'}>
-            <a className={styles.branding_link}>
-              <h1 className={styles.title}>{title}</h1>
-              <h2 className={styles.subtitle}>{subtitle}</h2>
-            </a>
-          </Link>
-        </div>
-        <Nav />
-        <SocialNav />
-      </header>
-    </>
+    <header className={styles.header}>
+      <div className={styles.branding}>
+        <Link className={styles.branding_link} href={'/'}>
+          <h1 className={styles.title}>Dave Mozdzanowski</h1>
+          <h2 className={styles.subtitle}>Developer / Designer</h2>
+        </Link>
+      </div>
+      <Nav />
+      <SocialNav />
+    </header>
   );
 };
 

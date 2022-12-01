@@ -1,0 +1,33 @@
+.header {
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.branding {
+  display: flex;
+  flex-direction: column;
+}
+
+.branding_link {
+  color: #000;
+  text-decoration: none;
+}
+
+.title {
+  font-variation-settings: "wght" 400;
+  margin: 0;
+  transition: all 0.25s linear;
+
+  &:hover {
+    font-variation-settings: "wght" 700;
+    transition: all 0.25s linear;
+  }
+}
+
+.subtitle {
+  margin: 0;
+  color: #505050;
+  font-weight: 300;
+}

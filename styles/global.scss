@@ -2,18 +2,4 @@ html,
 body {
   height: 100%;
   margin: 0;
-  font-family: 'Ubuntu', sans-serif;
-}
-
-#__next {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.title {
-  font-weight: 700;
-  text-align: center;
-  margin: 0;
 }

@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
-import styles from '../../styles/NavLink.module.scss';
+import styles from './NavLink.module.scss';
 
 const NavLink = ({ href, children }) => {
   return (
-    <Link href={href} passHref>
-      <a className={styles['nav-link']}>{children}</a>
+    <Link className={styles['nav-link']} href={href}>
+      {children}
     </Link>
   );
 };
