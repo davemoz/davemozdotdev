@@ -4,6 +4,4 @@ The ongoing development of davemoz.dev.
 
 Uses:
 
-* Next.js
-* Netlify SSG
-* Netlify CMS
+- Next.js on Vercel

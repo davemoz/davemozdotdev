@@ -4,18 +4,48 @@ subtitle: University capstone project
 date: Spring 2021
 image: /assets/img/projects/capstone-thumbnail.png
 imageAlt: Screenshot of the Covid-19 resource allocation prediction application by Dave Mozdzanowski
+liveLink: https://c964-capstone.vercel.app/
+frontend: ["Javascript/React", "NextJs", "D3/Plotly/Chart.js"]
+backend: ["Python/Flask", "Tensorflow", "Google Cloud Platform"]
 ---
 
-import Meta from "../../components/Meta";
-import TechUsed from "../../components/Projects/TechUsed";
+import ProjectTitle from "../components/Projects/ProjectTitle";
 
-<Meta title="BSCS capstone project" />
-
-# NYC Covid-19 resource allocation prediction application
-
-<TechUsed
-  frontend={["Javascript/React", "NextJs", "D3/Plotly/Chart.js"]}
-  backend={["Python/Flask", "Tensorflow", "Google Cloud Platform"]}
+<ProjectTitle
+  title={"NYC Covid-19 resource allocation prediction application"}
+  linkHref={liveLink}
+  subtitle={subtitle}
+  date={date}
 />
 
-This project was the capstone for the computer science Bachelors degree program I completed in 2021. It is [hosted on Vercel](https://c964-capstone.vercel.app/).
+This project was the capstone for the computer science Bachelors degree program I completed in 2021.
+
+The requirements of the project were:
+
+1. Implement one descriptive method and one non-descriptive (predictive or prescriptive) method.
+2. Use of collected or available datasets.
+3. Includes a decision-support functionality related to the non-descriptive method.
+4. Use methods and algorithms supporting data exploration and preparation to make data
+   useable.
+5. Implementation of interactive queries to access specific data.
+6. Include a machine-learning method(s) and algorithm(s) to support the decision making
+   functionality.
+7. Incorporate functionalities that will evaluate the accuracy of the application’s outcome.
+8. Provide an industry-appropriate security features that protects access to the application of
+   data.
+9. Include a tool(s) to monitor the applications functionality for maintenance purposes.
+10. Include a user-friendly, functional dashboard that includes at least three visualization types
+    (not just images) for data exploration and inspection.
+
+This project could be a standalone program, or a web or mobile application. I chose to create a web application using the NextJS framework, hosted on Vercel.
+
+The backend functionality was written in Python using Flask for a lightweight server, and Tensorflow for the machine learning model creation and training.
+
+The dataset came from the publicly-available data api provided by [https://data.cityofnewyork.us](https://data.cityofnewyork.us).
+
+## Retrospective
+
+Looking back now, there are several things I would have changed or added for this project:
+
+1. Saving the TF model after training so it doesn't need to happen on every request. This takes upwards of 2-3 minutes, which tends to appear as though the request has failed.
+2. Before learning about the above solution for saving & reusing models, I thought about streaming status updates of the model creation/training process on the server, either using WebSockets or Streams.

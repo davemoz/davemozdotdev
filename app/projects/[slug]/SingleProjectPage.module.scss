@@ -1,0 +1,52 @@
+.link {
+  color: var(--gray-90);
+  text-decoration: none;
+}
+
+.project {
+  display: flex;
+  grid-gap: 40px;
+}
+
+.content {
+  margin-bottom: 20px;
+}
+
+.img-wrap {
+  border: 10px solid #fff;
+  margin: 60px 2em;
+  position: relative;
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+    border: solid var(--gray-30);
+    z-index: -1;
+  }
+
+  &:before {
+    top: -2em;
+    bottom: -2em;
+    left: 1em;
+    right: 1em;
+    border-width: 0 1px;
+  }
+
+  &:after {
+    top: 1em;
+    bottom: 1em;
+    left: -2em;
+    right: -2em;
+    border-width: 1px 0;
+  }
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+}
+
+.sidebar {
+  padding-top: 55px;
+}

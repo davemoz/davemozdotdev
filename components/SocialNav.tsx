@@ -1,42 +1,39 @@
-import Link from 'next/link';
-import { library, icon } from "@fortawesome/fontawesome-svg-core";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithubSquare,
   faStackOverflow,
   faLinkedin,
   faTwitterSquare,
-  faInstagramSquare
+  faInstagramSquare,
 } from "@fortawesome/free-brands-svg-icons";
-
-library.add([faGithubSquare, faStackOverflow, faLinkedin, faTwitterSquare, faInstagramSquare]);
 
 import styles from "./SocialNav.module.scss";
 
 const socials = {
   github: {
     url: "https://github.com/davemoz",
-    icon: icon({ prefix: 'fab', iconName: 'github-square' }).html
+    icon: <FontAwesomeIcon icon={faGithubSquare} />,
   },
   stackoverflow: {
     url: "https://stackoverflow.com/users/1204415/dmoz",
-    icon: icon({ prefix: 'fab', iconName: 'stack-overflow' }).html
+    icon: <FontAwesomeIcon icon={faStackOverflow} />,
   },
   linkedin: {
     url: "https://linkedin.com/davemoz",
-    icon: icon({ prefix: 'fab', iconName: 'linkedin' }).html
+    icon: <FontAwesomeIcon icon={faLinkedin} />,
   },
   twitter: {
     url: "https://twitter.com/dave_moz",
-    icon: icon({ prefix: 'fab', iconName: 'twitter-square' }).html
+    icon: <FontAwesomeIcon icon={faTwitterSquare} />,
   },
   instagram: {
     url: "https://instagram.com/thewizardofmoz",
-    icon: icon({ prefix: 'fab', iconName: 'instagram-square' }).html
+    icon: <FontAwesomeIcon icon={faInstagramSquare} />,
   },
 };
 
 const SocialNav = () => {
-
   return (
     <ul className={styles["socials-list"]}>
       {Object.keys(socials).map((key) => (
@@ -46,8 +43,9 @@ const SocialNav = () => {
             className={styles["social-link"]}
             target="_blank"
             rel="noreferrer"
-            dangerouslySetInnerHTML={{ __html: socials[key].icon }}
-          />
+          >
+            {socials[key].icon}
+          </Link>
         </li>
       ))}
     </ul>

@@ -1,0 +1,35 @@
+.title,
+.subtitle {
+  margin: 0;
+}
+
+.title {
+  margin: 0 0 10px;
+}
+
+.wrap {
+  align-items: center;
+  display: flex;
+  grid-gap: 20px;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  color: var(--gray-30);
+  display: flex;
+  margin: 0;
+  font-size: 0.8em;
+  font-weight: 400;
+}
+
+.date {
+  color: var(--gray-30);
+  display: flex;
+  font-style: italic;
+
+  .sep {
+    font-style: normal;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

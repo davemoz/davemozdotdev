@@ -11,7 +11,7 @@
 }
 
 .branding_link {
-  color: #000;
+  color: var(--black);
   text-decoration: none;
 }
 
@@ -28,6 +28,6 @@
 
 .subtitle {
   margin: 0;
-  color: #505050;
+  color: var(--gray-60);
   font-weight: 300;
 }

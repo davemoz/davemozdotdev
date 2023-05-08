@@ -3,13 +3,13 @@
   margin-right: 30px;
 }
 
-.nav-list {
+.list {
   display: flex;
   list-style: none;
   padding-left: 30px;
 }
 
-.nav-item {
+.item {
   margin-right: 30px;
 
   &:last-child {
@@ -17,7 +17,11 @@
   }
 }
 
-.nav-link {
+.link {
   color: #000;
-  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+    color: var(--turquoise);
+  }
 }

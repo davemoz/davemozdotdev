@@ -1,13 +1,8 @@
 {
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module"
-  },
   "extends": [
-    "plugin:@next/next/recommended",
     "next/core-web-vitals"
   ],
   "rules": {
-    "react/no-unescaped-entities": 0
+    // "react/no-unescaped-entities": "off"
   }
 }

@@ -3,3 +3,23 @@ body {
   height: 100%;
   margin: 0;
 }
+
+a {
+  color: var(--turquoise);
+}
+
+img {
+  display: block;
+}
+
+:root {
+  // Colors
+  --black: #000;
+  --gray-90: #2f2f2f;
+  --gray-60: #5d5d5d;
+  --gray-30: #b7b7b7;
+  --gray-20: #e5e5e5;
+  --turquoise: #00b9a6;
+  --turquoise-text-decoration: rgba(0, 255, 137, 0.15);
+  --white: #fff;
+}
