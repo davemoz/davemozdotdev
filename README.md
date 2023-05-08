@@ -4,4 +4,4 @@ The ongoing development of davemoz.dev.
 
 Uses:
 
-- Next.js on Vercel
+- [https://nextjs.org/](Next.js) on [https://vercel.com/](Vercel)
