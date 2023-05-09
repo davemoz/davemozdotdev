@@ -20,12 +20,8 @@ const socials = {
     icon: <FontAwesomeIcon icon={faStackOverflow} />,
   },
   linkedin: {
-    url: "https://linkedin.com/davemoz",
+    url: "https://www.linkedin.com/in/davejmoz/",
     icon: <FontAwesomeIcon icon={faLinkedin} />,
-  },
-  twitter: {
-    url: "https://twitter.com/dave_moz",
-    icon: <FontAwesomeIcon icon={faTwitterSquare} />,
   },
   instagram: {
     url: "https://instagram.com/thewizardofmoz",

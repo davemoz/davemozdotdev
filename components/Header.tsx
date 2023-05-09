@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Nav from "./Nav/Nav";
-import SocialNav from "./SocialNav";
+import SocialNav from "./Nav/SocialNav";
 
 import styles from "./Header.module.scss";
 
