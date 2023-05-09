@@ -14,8 +14,9 @@ const About = () => {
       <div className={styles.body_wrap}>
         <div className={styles.column}>
           <p className={styles.paragraph}>
-            Hi, I&apos;m Dave. I am a designer-turned-developer. I love learning
-            new things about just about anything.
+            Hi, I&apos;m Dave. I am a designer-turned-software engineer with 10+
+            and 4+ years of experience, respectively. I love learning new things
+            about just about anything.
           </p>
           <p className={styles.paragraph}>
             I am currently a Senior Software Engineer at{" "}

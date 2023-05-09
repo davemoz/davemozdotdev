@@ -8,9 +8,8 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.branding}>
-        <Link className={styles.branding_link} href={"/"}>
+        <Link className={styles.branding_link} href="/">
           <h1 className={styles.title}>Dave Mozdzanowski</h1>
-          <h2 className={styles.subtitle}>Developer / Designer</h2>
         </Link>
       </div>
       <Nav />
