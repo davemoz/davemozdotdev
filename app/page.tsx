@@ -7,7 +7,6 @@ export const metadata: Metadata = {
 };
 
 const Home = () => {
-  {/* @ts-expect-error Server Component */}
   return <ProjectsGrid />;
 };
 
