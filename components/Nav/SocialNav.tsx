@@ -2,23 +2,13 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithubSquare,
-  faStackOverflow,
   faLinkedin,
-  faTwitterSquare,
   faInstagramSquare,
 } from "@fortawesome/free-brands-svg-icons";
 
 import styles from "./SocialNav.module.scss";
 
 const socials = {
-  github: {
-    url: "https://github.com/davemoz",
-    icon: <FontAwesomeIcon icon={faGithubSquare} />,
-  },
-  stackoverflow: {
-    url: "https://stackoverflow.com/users/1204415/dmoz",
-    icon: <FontAwesomeIcon icon={faStackOverflow} />,
-  },
   linkedin: {
     url: "https://www.linkedin.com/in/davejmoz/",
     icon: <FontAwesomeIcon icon={faLinkedin} />,
@@ -26,6 +16,10 @@ const socials = {
   instagram: {
     url: "https://instagram.com/thewizardofmoz",
     icon: <FontAwesomeIcon icon={faInstagramSquare} />,
+  },
+  github: {
+    url: "https://github.com/davemoz",
+    icon: <FontAwesomeIcon icon={faGithubSquare} />,
   },
 };
 

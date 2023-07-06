@@ -16,7 +16,6 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV !== "development",
   },
   experimental: {
-    appDir: true,
     mdxRs: true,
   },
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
