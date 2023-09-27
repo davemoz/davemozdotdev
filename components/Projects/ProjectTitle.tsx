@@ -2,7 +2,19 @@ import ViewProjectLink from "@components/Projects/ViewProjectLink";
 
 import styles from "./ProjectTitle.module.scss";
 
-const ProjectTitle = ({ title, linkHref, subtitle, date }) => {
+type ProjectTitleProps = {
+  title: string;
+  linkHref: string;
+  subtitle: string;
+  date: string;
+};
+
+const ProjectTitle = ({
+  title,
+  linkHref,
+  subtitle,
+  date,
+}: ProjectTitleProps) => {
   return (
     <>
       <h1 className={styles.title}>{title}</h1>

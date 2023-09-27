@@ -3,7 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { PROJECTS_PATH } from "@utils/mdxUtils";
 
-type Project = {
+export type Project = {
   frontmatter: {
     [key: string]: any;
   };
@@ -11,8 +11,7 @@ type Project = {
   slug: string;
 };
 
-export async function getSingleMdxProject(slug): Promise<Project> {
-  if (slug === undefined) return;
+export async function getSingleMdxProject(slug: string): Promise<Project> {
   let projectFilePath;
   let formattedSlug;
   if (slug.includes(".mdx")) {

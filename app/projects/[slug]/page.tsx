@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { compileMDX } from "next-mdx-remote/rsc";
 
 import { getAllMdxProjects, getSingleMdxProject } from "@utils/getMdxProjects";
-import { useMDXComponents } from "~/mdx-components";
+import { provideMDXComponents } from "~/mdx-components";
 import TechUsed from "@components/Projects/TechUsed";
-
-import styles from "./SingleProjectPage.module.scss";
 
 import CapstoneImg from "~/public/assets/img/projects/capstone-thumbnail.png";
 import KayMozImg from "~/public/assets/img/projects/kaymoz-thumbnail.png";
+
+import styles from "./SingleProjectPage.module.scss";
+
+type MetadataProps = {
+  params: { slug: string };
+};
 
 type SingleProjectPageProps = {
   params: {
@@ -17,7 +21,15 @@ type SingleProjectPageProps = {
   };
 };
 
-const projectsImgConfig = {
+type ProjectsImgConfigType = {
+  [slug: string]: {
+    img: StaticImageData;
+    width: number;
+    height: number;
+  };
+};
+
+const projectsImgConfig: ProjectsImgConfigType = {
   capstone: {
     img: CapstoneImg,
     width: 1541,
@@ -30,7 +42,9 @@ const projectsImgConfig = {
   },
 };
 
-export async function generateMetadata({ params }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: MetadataProps): Promise<Metadata> {
   const project = await getSingleMdxProject(params.slug);
   return {
     title: project.frontmatter.title,
@@ -40,7 +54,7 @@ export async function generateMetadata({ params }): Promise<Metadata> {
 const SingleProjectPage = async ({ params }: SingleProjectPageProps) => {
   const { slug } = params;
   const { frontmatter, mdxSource } = await getSingleMdxProject(slug);
-  const components = useMDXComponents();
+  const components = provideMDXComponents();
   const { content } = await compileMDX({
     source: mdxSource,
     options: {

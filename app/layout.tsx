@@ -17,7 +17,7 @@ export const metadata = {
   },
 };
 
-const RootLayout = ({ children }) => {
+const RootLayout = ({ children }: React.PropsWithChildren) => {
   return (
     <html className={workSans.className}>
       <body>

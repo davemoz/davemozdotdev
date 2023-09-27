@@ -1,6 +1,11 @@
 import styles from "./TechUsed.module.scss";
 
-const TechUsed = ({ frontend, backend }) => {
+type TechUsedProps = {
+  frontend: [string];
+  backend: [string];
+};
+
+const TechUsed = ({ frontend, backend }: TechUsedProps) => {
   return (
     <div className={styles.wrap}>
       {frontend && (

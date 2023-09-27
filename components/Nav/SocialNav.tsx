@@ -8,7 +8,14 @@ import {
 
 import styles from "./SocialNav.module.scss";
 
-const socials = {
+type SocialsConfigType = {
+  [slug: string]: {
+    url: string;
+    icon: JSX.Element;
+  };
+};
+
+const socials: SocialsConfigType = {
   linkedin: {
     url: "https://www.linkedin.com/in/davejmoz/",
     icon: <FontAwesomeIcon icon={faLinkedin} />,

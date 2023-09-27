@@ -3,7 +3,7 @@ import { faExternalLink } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./ViewProjectLink.module.scss";
 
-const ViewProjectLink = ({ href }) => {
+const ViewProjectLink = ({ href }: { href: string }) => {
   return (
     <a className={styles.link} href={href} target="_blank">
       View live project{" "}

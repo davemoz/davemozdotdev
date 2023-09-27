@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Project } from "@utils/getMdxProjects";
 
 import styles from "./ProjectThumb.module.scss";
 
-const ProjectThumb = ({ project }) => {
+const ProjectThumb = ({ project }: { project: Project }) => {
   const {
     frontmatter: { date, image, imageAlt, title, subtitle },
     slug,
