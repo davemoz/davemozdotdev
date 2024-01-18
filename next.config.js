@@ -18,6 +18,15 @@ const nextConfig = {
   experimental: {
     mdxRs: true,
   },
+  images: {
+    dangerouslyAllowSVG: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.placeholders.dev",
+      },
+    ],
+  },
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
   reactStrictMode: true,
   // webpack: (config, options) => {

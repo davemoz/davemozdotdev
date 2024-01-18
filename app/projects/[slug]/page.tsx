@@ -6,6 +6,8 @@ import { getAllMdxProjects, getSingleMdxProject } from "@utils/getMdxProjects";
 import { provideMDXComponents } from "~/mdx-components";
 import TechUsed from "@components/Projects/TechUsed";
 
+const BreadboxImg =
+  "https://images.placeholders.dev/?width=318&height=180&text=Coming%20soon&bgColor=%23f7f6f6&textColor=%236d6e71";
 import CapstoneImg from "~/public/assets/img/projects/capstone-thumbnail.png";
 import KayMozImg from "~/public/assets/img/projects/kaymoz-thumbnail.png";
 
@@ -23,22 +25,19 @@ type SingleProjectPageProps = {
 
 type ProjectsImgConfigType = {
   [slug: string]: {
-    img: StaticImageData;
-    width: number;
-    height: number;
+    img: StaticImageData | string;
   };
 };
 
 const projectsImgConfig: ProjectsImgConfigType = {
+  breadbox: {
+    img: BreadboxImg,
+  },
   capstone: {
     img: CapstoneImg,
-    width: 1541,
-    height: 735,
   },
   "kay-moz-ceramics": {
     img: KayMozImg,
-    width: 1163,
-    height: 597,
   },
 };
 
@@ -72,8 +71,6 @@ const SingleProjectPage = async ({ params }: SingleProjectPageProps) => {
               alt={frontmatter.imageAlt}
               className={styles.img}
               src={projectsImgConfig[slug].img}
-              height={projectsImgConfig[slug].height}
-              width={projectsImgConfig[slug].width}
             />
           )}
         </div>
