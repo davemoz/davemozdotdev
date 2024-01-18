@@ -6,8 +6,10 @@ import { getAllMdxProjects, getSingleMdxProject } from "@utils/getMdxProjects";
 import { provideMDXComponents } from "~/mdx-components";
 import TechUsed from "@components/Projects/TechUsed";
 
+const NapquestImg = 
+  "https://images.placeholders.dev/?width=300&height=180&text=Coming%20soon&bgColor=%23f7f6f6&textColor=%236d6e71";
 const BreadboxImg =
-  "https://images.placeholders.dev/?width=318&height=180&text=Coming%20soon&bgColor=%23f7f6f6&textColor=%236d6e71";
+  "https://images.placeholders.dev/?width=300&height=180&text=Coming%20soon&bgColor=%23f7f6f6&textColor=%236d6e71";
 import CapstoneImg from "~/public/assets/img/projects/capstone-thumbnail.png";
 import KayMozImg from "~/public/assets/img/projects/kaymoz-thumbnail.png";
 
@@ -31,11 +33,17 @@ type ProjectsImgConfigType = {
   };
 };
 
+// These are the dimensions for the full-size image on individual project pages
 const projectsImgConfig: ProjectsImgConfigType = {
+  napquest: {
+    img: NapquestImg,
+    width: 1541,
+    height: 735,
+  },
   breadbox: {
     img: BreadboxImg,
-    width: 300,
-    height: 200,
+    width: 1541,
+    height: 735,
   },
   capstone: {
     img: CapstoneImg,
