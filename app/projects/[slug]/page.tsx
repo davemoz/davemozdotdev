@@ -26,18 +26,26 @@ type SingleProjectPageProps = {
 type ProjectsImgConfigType = {
   [slug: string]: {
     img: StaticImageData | string;
+    width: number;
+    height: number;
   };
 };
 
 const projectsImgConfig: ProjectsImgConfigType = {
   breadbox: {
     img: BreadboxImg,
+    width: 300,
+    height: 200,
   },
   capstone: {
     img: CapstoneImg,
+    width: 1541,
+    height: 735,
   },
   "kay-moz-ceramics": {
     img: KayMozImg,
+    width: 1163,
+    height: 597,
   },
 };
 
@@ -71,6 +79,8 @@ const SingleProjectPage = async ({ params }: SingleProjectPageProps) => {
               alt={frontmatter.imageAlt}
               className={styles.img}
               src={projectsImgConfig[slug].img}
+              height={projectsImgConfig[slug].height}
+              width={projectsImgConfig[slug].width}
             />
           )}
         </div>
