@@ -52,7 +52,7 @@ importers:
         version: 1.94.2
     devDependencies:
       '@types/node':
-        specifier: 20.19.25
+        specifier: ^20.19.25
         version: 20.19.25
       '@types/prop-types':
         specifier: ^15.7.15

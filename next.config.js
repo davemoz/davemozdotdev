@@ -18,6 +18,7 @@ const nextConfig = {
   experimental: {
     mdxRs: true,
   },
+  pageExtensions: ["ts", "tsx", "mdx"],
   images: {
     dangerouslyAllowSVG: true,
     remotePatterns: [
