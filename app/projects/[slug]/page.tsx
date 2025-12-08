@@ -67,7 +67,9 @@ export async function generateMetadata({
   };
 }
 
-const SingleProjectPage = async ({ params }: SingleProjectPageProps) => {
+export default async function SingleProjectPage({
+  params,
+}: SingleProjectPageProps) {
   const { slug } = await params;
   const { frontmatter, mdxSource } = await getSingleMdxProject(slug);
   const components = provideMDXComponents();
@@ -102,7 +104,7 @@ const SingleProjectPage = async ({ params }: SingleProjectPageProps) => {
       </div>
     </div>
   );
-};
+}
 
 export async function generateStaticParams() {
   const projects = await getAllMdxProjects();
@@ -112,4 +114,5 @@ export async function generateStaticParams() {
   }));
 }
 
-export default SingleProjectPage;
+// Essential for not-found to work with generateStaticParams
+export const dynamicParams = false;

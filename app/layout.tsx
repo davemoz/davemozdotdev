@@ -9,8 +9,9 @@ config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatic
 
 import "../styles/global.scss";
 import styles from "./RootLayout.module.scss";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     default: "Portfolio of Dave Mozdzanowski",
     template: "%s | Portfolio of Dave Mozdzanowski",
