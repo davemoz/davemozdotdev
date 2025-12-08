@@ -27,7 +27,6 @@ const nextConfig = {
       },
     ],
   },
-  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
   turbopack: {},
   // webpack: (config, options) => {
   //   return config;

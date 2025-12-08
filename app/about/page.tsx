@@ -32,7 +32,7 @@ const About = () => {
           </p>
           <p className={styles.paragraph}>
             I grew up in Western Massachusetts, and currently reside on Long
-            Island, NY with my wife and son.
+            Island, NY with my wife, son, and daughter.
           </p>
         </div>
         <div className={styles.image_container}>
