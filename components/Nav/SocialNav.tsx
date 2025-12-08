@@ -7,11 +7,12 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import styles from "./SocialNav.module.scss";
+import { ReactNode } from "react";
 
 type SocialsConfigType = {
   [slug: string]: {
     url: string;
-    icon: JSX.Element;
+    icon: ReactNode;
   };
 };
 

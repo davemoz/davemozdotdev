@@ -1,11 +1,5 @@
-type ProjectPageLayoutProps = React.PropsWithChildren<{
-  params: {
-    slug: string;
-  };
-}>;
+import { PropsWithChildren } from "react";
 
-const ProjectPageLayout = ({ children, params }: ProjectPageLayoutProps) => {
+export default function ProjectPageLayout({ children }: PropsWithChildren) {
   return <section>{children}</section>;
-};
-
-export default ProjectPageLayout;
+}
