@@ -29,9 +29,9 @@ export async function getSingleMdxProject(slug: string): Promise<Project> {
 
 export async function getAllMdxProjects() {
   const files = await fs.readdir(PROJECTS_PATH);
-  const projects = Promise.all(
-    files.map(async (projectFileSlug) => {
-      return await getSingleMdxProject(projectFileSlug);
+  const projects = await Promise.all(
+    files.map((projectFileSlug) => {
+      return getSingleMdxProject(projectFileSlug);
     })
   );
   return projects;
