@@ -28,7 +28,7 @@ const nextConfig = {
     ],
   },
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
-  reactStrictMode: true,
+  turbopack: {},
   // webpack: (config, options) => {
   //   return config;
   // },

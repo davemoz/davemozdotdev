@@ -6,8 +6,6 @@ export const metadata: Metadata = {
   title: "Home",
 };
 
-const Home = () => {
+export default function Home() {
   return <ProjectsGrid />;
-};
-
-export default Home;
+}

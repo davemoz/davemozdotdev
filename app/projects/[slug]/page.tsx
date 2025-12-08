@@ -6,7 +6,7 @@ import { getAllMdxProjects, getSingleMdxProject } from "@utils/getMdxProjects";
 import { provideMDXComponents } from "~/mdx-components";
 import TechUsed from "@components/Projects/TechUsed";
 
-const NapquestImg = 
+const NapquestImg =
   "https://images.placeholders.dev/?width=300&height=180&text=Coming%20soon&bgColor=%23f7f6f6&textColor=%236d6e71";
 const BreadboxImg =
   "https://images.placeholders.dev/?width=300&height=180&text=Coming%20soon&bgColor=%23f7f6f6&textColor=%236d6e71";
@@ -60,14 +60,15 @@ const projectsImgConfig: ProjectsImgConfigType = {
 export async function generateMetadata({
   params,
 }: MetadataProps): Promise<Metadata> {
-  const project = await getSingleMdxProject(params.slug);
+  const { slug } = await params;
+  const project = await getSingleMdxProject(slug);
   return {
     title: project.frontmatter.title,
   };
 }
 
 const SingleProjectPage = async ({ params }: SingleProjectPageProps) => {
-  const { slug } = params;
+  const { slug } = await params;
   const { frontmatter, mdxSource } = await getSingleMdxProject(slug);
   const components = provideMDXComponents();
   const { content } = await compileMDX({
@@ -87,8 +88,8 @@ const SingleProjectPage = async ({ params }: SingleProjectPageProps) => {
               alt={frontmatter.imageAlt}
               className={styles.img}
               src={projectsImgConfig[slug].img}
-              height={projectsImgConfig[slug].height}
-              width={projectsImgConfig[slug].width}
+              height={`${projectsImgConfig[slug].height}`}
+              width={`${projectsImgConfig[slug].width}`}
             />
           )}
         </div>

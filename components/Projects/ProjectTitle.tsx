@@ -4,7 +4,7 @@ import styles from "./ProjectTitle.module.scss";
 
 type ProjectTitleProps = {
   title: string;
-  linkHref: string;
+  linkHref?: string;
   subtitle: string;
   date: string;
 };
