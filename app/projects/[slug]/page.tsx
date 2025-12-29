@@ -6,8 +6,7 @@ import { getAllMdxProjects, getSingleMdxProject } from "@utils/getMdxProjects";
 import { provideMDXComponents } from "~/mdx-components";
 import TechUsed from "@components/Projects/TechUsed";
 
-const NapquestImg =
-  "https://images.placeholders.dev/?width=300&height=180&text=Coming%20soon&bgColor=%23f7f6f6&textColor=%236d6e71";
+const NapquestImg = "~/public/assets/img/projects/napquest-thumbnail.png";
 const BreadboxImg =
   "https://images.placeholders.dev/?width=300&height=180&text=Coming%20soon&bgColor=%23f7f6f6&textColor=%236d6e71";
 import CapstoneImg from "~/public/assets/img/projects/capstone-thumbnail.png";
