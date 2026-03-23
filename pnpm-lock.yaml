@@ -45,7 +45,7 @@ importers:
         specifier: ^4.0.3
         version: 4.0.3
       next:
-        specifier: ^16.0.10
+        specifier: 16.0.10
         version: 16.0.10(@babel/core@7.28.5)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(sass@1.97.0)
       next-mdx-remote:
         specifier: ^6.0.0
