@@ -10,7 +10,6 @@ config.autoAddCss = false; // Tell Font Awesome to skip adding the CSS automatic
 import "../styles/global.scss";
 import styles from "./RootLayout.module.scss";
 import { Metadata } from "next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: {
@@ -30,7 +29,6 @@ const RootLayout = ({ children }: React.PropsWithChildren) => {
           </main>
           <Footer />
         </div>
-        <SpeedInsights />
       </body>
     </html>
   );
